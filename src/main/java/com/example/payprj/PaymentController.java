@@ -18,7 +18,7 @@ public class PaymentController {
         return new BaseResponse(SUCCESS_STATUS, 1);
     }
 
-    @RequestMapping(value = "/pay", method = RequestMethod.POST)
+    @PostMapping("/pay")
     public BaseResponse pay(@RequestParam(value = "key") String key, @RequestBody PaymentRequest request) {
 
         final BaseResponse response;
@@ -27,6 +27,7 @@ public class PaymentController {
             int userId = request.getUserId();
             String itemId = request.getItemId();
             double discount = request.getDiscount();
+            //name = "test";
             // Process the request
             // ....
             // Return success response to the client.

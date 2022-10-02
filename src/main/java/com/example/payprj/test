@@ -1,0 +1,3 @@
+ curl -X POST -d '{"userId":0, "itemId":"string", "discount":0}' -H 'Content-Type: application/json' localhost:8080/payment/pay?key=SHARED_KEY
+ {"status":"success","code":100}
+
